@@ -14,23 +14,22 @@ from src.s0_helpers.qries.qry_constraints import QryConstraints
 duckdb_path = settings.paths.duckdb
 
 
-def set_constraints(conn: ddb.DuckDBPyConnection, table_nm:str)->None:
+def set_constraints(conn: ddb.DuckDBPyConnection, table_nm: str) -> None:
     qry_constr = QryConstraints(conn, table_nm=table_nm)
     keys = {
-        "qryR_invoices": ['ndx'],
-        'qryR_costs_optix': ['parent_item_no', 'cost_type', 'cal_month_id'],
-        'qryR_clusters': ['clust', 'cie']
-        
+        "qryR_invoices": ["ndx"],
+        "qryR_costs_optix": ["parent_item_no", "cost_type", "cal_month_id"],
+        "qryR_clusters": ["clust", "cie"],
     }
     qry_constr.add_primary_key(keys[table_nm])
 
 
 def main() -> None:
-    TDIC_NM:Final[str] = 'main'
+    TDIC_NM: Final[str] = "main"
     DB_NM: Final[str] = "db"
     acc_conn, _ = acc(db_choice=DB_NM)
     tdict = get_tdict(TDIC_NM)
-    
+
     # print(tdict)
     for line in tdict.lines:
         if line.activ:

@@ -64,7 +64,7 @@ def create_msg(text: str, type: str | None = None) -> str:
             fmt = ("[gold1]", "\u2022", "[/gold1]")
         case _:
             raise ValueError(f"'{a_type}' is an invalid rich msg type.")
-        
+
     msg = fmt[0] + " ".join([fmt[1], text]) + fmt[2]
     return msg
 

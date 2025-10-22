@@ -91,15 +91,13 @@ class CalcSum:
             raise KeyError(msg)
         return True
 
-    def calculate(
-        self, sum_na: bool, drop_na: bool, tol: float = 1e-8
-    ) -> pd.DataFrame:
+    def calculate(self, sum_na: bool, drop_na: bool, tol: float = 1e-8) -> pd.DataFrame:
         """Calculate the sumproduct of the data with the given matrix.
 
         The `with_na` argument is very important. See the notebook 'calcsum01a.ipynb' for more details.
 
         If `sum_na=True` then `NaN` will replace missing data and the `sum` will return `NaN` when there is missing data.
-        
+
         If `sum_na=False` then `sum` will assume the missing data is equivalent to zero.
 
         If you want to have sum of chronological data, i.e. consider missing data as zero, then you should use `sum_na=False`.  In this case, check

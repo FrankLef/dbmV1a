@@ -47,7 +47,7 @@ class ConnectAcc:
 
     def load(self, data: pd.DataFrame, tbl: str) -> pd.DataFrame:
         """Upload data to MS Access.
-        
+
         IMPORTANT: The `con` parameter actually take an SQLAlchemy engine,
         NOT a connection!!  This is different than for `pandas.read_sql` and
         what is usually done.  This is in the description of the `con` argument
@@ -75,7 +75,7 @@ class ConnectAcc:
 
     def read(self, qry: str) -> pd.DataFrame:
         """Download  data from MS Access.
-        
+
         IMPORTANT: Make sure you use SQLAlchemy `text()` to format the query so
         that it is useable by the engine.
 

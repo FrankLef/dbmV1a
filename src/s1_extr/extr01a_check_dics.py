@@ -3,7 +3,6 @@ from rich import print as rprint
 # from typing import Final
 
 from src._registry.tdic import main as tdic
-from src._registry.ddic import main as ddic
 
 
 def main() -> int:

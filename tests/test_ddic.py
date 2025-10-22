@@ -37,17 +37,20 @@ def dictbl1(dic1):
 
 def test_lines(dictbl1):
     a_line = dictbl1.lines[0]
-    assert isinstance(a_line,TestDicLine)
+    assert isinstance(a_line, TestDicLine)
 
 
-@pytest.mark.parametrize("txt, target, expected", [
-    ["tbl", "tbl", True],
-    ["tbl", "", False],
-    ["", "tbl", True],
-    ["", "", True],
-    ["val1", "val1,val2", True],
-    ["val3", "val1,val2", False]
-])
+@pytest.mark.parametrize(
+    "txt, target, expected",
+    [
+        ["tbl", "tbl", True],
+        ["tbl", "", False],
+        ["", "tbl", True],
+        ["", "", True],
+        ["val1", "val1,val2", True],
+        ["val3", "val1,val2", False],
+    ],
+)
 def test_check_txt(dictbl1, txt, target, expected):
     a_line = dictbl1.lines[0]
     out = a_line.check_txt(txt=txt, target=target)

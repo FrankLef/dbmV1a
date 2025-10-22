@@ -5,7 +5,6 @@ from src.s0_helpers.graphics.titles import ITitles
 
 
 class TestTitle(ITitles):
-
     def write_title(self, text: str | None = None):
         self.title = text
 
