@@ -4,7 +4,7 @@ from pathlib import Path
 
 from config import settings
 
-from src.s0_helpers import connect_acc as acc
+from src.s0_helpers.conn import connect_acc as acc
 
 
 def main(db_choice: str) -> tuple[acc.ConnectAcc, Path]:

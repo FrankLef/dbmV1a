@@ -1,4 +1,4 @@
-duckdb = "db_todo.duckdb"
+duckdb = "db_dbm.duckdb"
 
 [tdict]
 tdict_xl = "tdict.xlsx"
@@ -7,10 +7,10 @@ tdict_xl = "tdict.xlsx"
 xbr_xl = "ddict_xbr.xlsx"
 
 [db]
-xbr = "C:/Users/Public/MyAcctg/xbrl/db_xbr.accdb"
+xbr = "C:/Users/Public/MyJob/DesjCap_cies/DBM/db_DBM_V1.accdb"
 
 [raw_db]
-xbr = "C:/Users/Public/MyAcctg/xbrl/db_xbr.accdb"
+xbr = "C:/Users/Public/MyJob/DesjCap_cies/DBM/db_DBM_V1.accdb"
 
 [dpaths]
 temp = "d0_temp"

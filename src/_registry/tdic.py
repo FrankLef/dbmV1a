@@ -8,7 +8,7 @@ from typing import Final
 # import json
 
 # import src.s0_helpers.richtools as rt
-import src.s0_helpers.cls.dic as dic
+import src.s0_helpers.xbr.dic as dic
 
 data_path = settings.paths.data
 tdict_xl = settings.tdict.tdict_xl
@@ -57,12 +57,7 @@ class TDicTable(dic.IDicTable):
 
 def main(name: str) -> TDicTable:
     SHEET: Final[str] = "data"
-    the_sources = {"main": tdict_xl}
-    try:
-        fn = the_sources[name]
-    except KeyError:
-        raise KeyError(f"'{name}' is an invalid tdict name.")
-    a_file = data_path.joinpath(fn)
+    a_file = data_path.joinpath(tdict_xl)
     tdic = TDicTable(name=name)
     data = tdic.read_xl(path=a_file, sheet_nm=SHEET)
     tdic.load(data)

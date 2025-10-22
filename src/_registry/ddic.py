@@ -5,7 +5,7 @@ import pandas as pd
 from config import settings
 from typing import Final
 
-import src.s0_helpers.cls.dic as dic
+import src.s0_helpers.xbr.dic as dic
 
 data_path = settings.paths.data
 xbr_xl = settings.ddict.xbr_xl
